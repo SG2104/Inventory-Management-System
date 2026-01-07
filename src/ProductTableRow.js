@@ -1,5 +1,5 @@
 import style from "./Style";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { createUseStyles } from "react-jss";
 import Product from "./Product";
 

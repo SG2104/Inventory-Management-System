@@ -17,17 +17,21 @@ const App = () => {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(null);
   const [itemRevenueMap, setItemRevenueMap] = useState([]);
-  let itemMap = {};
+
 
   const pages = [
-    { id: 0, title: "Products", content: <Products inventory={inventory} itemMap={itemRevenueMap}/> },
-    { id: 1,
+    { id: 0, title: "Products", content: <Products inventory={inventory} itemMap={itemRevenueMap} /> },
+    {
+      id: 1,
       title: "Customer Analytics",
-      content: <CustomerAnalytics inventory={inventory} sortedCustomers={sortedCustomers} updateSort={setSortedCustomers}/> },
+      content: <CustomerAnalytics inventory={inventory} sortedCustomers={sortedCustomers} updateSort={setSortedCustomers} />
+    },
     { id: 2, title: "The Team", content: <Team key="team" /> },
   ];
 
   useEffect(() => {
+
+    let itemMap = {};
     fetch("./products.json")
       .then((response) => response.json())
       .then(
@@ -48,11 +52,11 @@ const App = () => {
                     }
 
                     if (product.id in itemMap) {
-                        itemMap[product.id].timesPurchased += purchased.quantity;
+                      itemMap[product.id].timesPurchased += purchased.quantity;
                     } else {
-                        itemMap[product.id] = {
-                                timesPurchased: purchased.quantity
-                        };
+                      itemMap[product.id] = {
+                        timesPurchased: purchased.quantity
+                      };
                     }
 
 

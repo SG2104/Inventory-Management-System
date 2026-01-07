@@ -12,7 +12,7 @@ const CustomerAnalytics = ({ sortedCustomers, updateSort }) => {
 
   const classes = useStyles();
 
-    const [sorted, setSorted] = useState(sortedCustomers);
+  const [sorted, setSorted] = useState(sortedCustomers);
 
   function sort(fieldName, order) {
     let sign = order === "asc" ? 1 : -1;
@@ -44,19 +44,19 @@ const CustomerAnalytics = ({ sortedCustomers, updateSort }) => {
               <span className={classes.sortArrow} onClick={() => sort(header, "desc")} >
                 &#8595;
               </span>
-            ) : ( "" )}
+            ) : ("")}
             {" "}
             {sortable[index] ? (
               <span className={classes.sortArrow} onClick={() => sort(header, "asc")} >
                 &#8593;
               </span>
-            ) : ( "" )}
+            ) : ("")}
           </h4>
         ))}
       </section>
 
       {sorted.map((user, index) => {
-        let colored = index % 2 == 1 ? true : false;
+        let colored = index % 2 === 1 ? true : false;
         return (
           <CustomerTableRow key={user.fullName} user={user} colored={colored} />
         );

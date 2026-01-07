@@ -1,11 +1,11 @@
 const colors = {
-    title: '#274690',
-    smokeyWhite: '#F5F5F5',
-    white: '#FFFFFF',
-    mutePurple: "#523D4F",
-    lightGray: "#E2E2E2",
-    midGray: "#B0B0B0",
-    babyPink: "#FEECF2"
+  title: '#274690',
+  smokeyWhite: '#F5F5F5',
+  white: '#FFFFFF',
+  mutePurple: "#523D4F",
+  lightGray: "#E2E2E2",
+  midGray: "#B0B0B0",
+  babyPink: "#FEECF2"
 }
 
 const tableCellPadding = "10px 15px";
@@ -13,13 +13,13 @@ const cardBorderRadius = "30px";
 const cardFlipTime = "0.5s";
 
 const style = {
- funTitle: {
-        color: colors.title,
-        display: 'inline-block',
-        transition: 'transform 0.05s',
-        '&:hover': {
-            transform: 'translateY(-3px)'
-        }
+  funTitle: {
+    color: colors.title,
+    display: 'inline-block',
+    transition: 'transform 0.05s',
+    '&:hover': {
+      transform: 'translateY(-3px)'
+    }
   },
   app: {
     margin: "0rem",
@@ -40,7 +40,7 @@ const style = {
     boxShadow:
       "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 0px 30px",
     '@media screen and (max-width: 1000px)': {
-        display: 'block'
+      display: 'block'
     }
   },
   navTitle: {
@@ -49,8 +49,8 @@ const style = {
     margin: "0px",
     verticalAlign: "center",
     '@media screen and (max-width: 1000px)': {
-        display: 'block',
-        textAlign: 'center'
+      display: 'block',
+      textAlign: 'center'
     }
   },
   navHeaderMenu: {
@@ -59,8 +59,8 @@ const style = {
     margin: 0,
     paddingLeft: 0,
     '@media screen and (max-width: 1000px)': {
-        display: 'block',
-        textAlign: 'center'
+      display: 'block',
+      textAlign: 'center'
     }
   },
   navHeaderItem: {
@@ -81,8 +81,8 @@ const style = {
       transform: "translateY(0)",
     },
     '@media screen and (max-width: 1000px)': {
-        display: 'block',
-        margin: '20px 0px'
+      display: 'block',
+      margin: '20px 0px'
     }
   },
 
@@ -103,7 +103,7 @@ const style = {
   },
   bodyHeader: {
     '@media screen and (max-width: 1000px)': {
-        textAlign: 'center'
+      textAlign: 'center'
     }
   },
   tableContent: {
@@ -182,7 +182,7 @@ const style = {
     perspective: "1000px",
     transition: `transform ${cardFlipTime}`,
     '@media screen and (max-width: 1000px)': {
-        display: 'block'
+      display: 'block'
     }
   },
   flipCardInner: {
@@ -292,7 +292,8 @@ const style = {
   },
   productImage: {
     height: "250px",
-    maxWidth: '400px'
+    maxWidth: '400px',
+    mixBlendMode: 'multiply'
   },
   popupContent: {
     padding: "1em 1em",

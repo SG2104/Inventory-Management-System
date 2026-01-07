@@ -15,7 +15,7 @@ function Team() {
                         <div className={classes.flipCardInner}>
                             <div className={classes.flipCardFront}>
                                 <h1>{member.name}</h1>
-                                <img className={classes.teamImage} src={member.image} alt="Profile Image"/>
+                                <img className={classes.teamImage} src={member.image} alt={member.name} />
                             </div>
                             <div className={classes.flipCardBack}>
                                 <h1>{member.name}</h1>
