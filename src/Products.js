@@ -22,22 +22,22 @@ const Products = ({ inventory, itemMap }) => {
     <div className={classes.tableContent}>
       <section className={classes.productRow}>
         {headers.map((header) => (
-          <h4 key={header} className={classes.tableCellHeader}>
-            {header}
-          </h4>
+          <div key={header} className={`${classes.tableCellHeader} ${classes.leftFlex}`}>
+            <h4>{header}</h4>
+          </div>
         ))}
       </section>
       {inventory.map((product, index) => {
-          const productRev = itemMap[index+1];
-          return (
-            <ProductTableRow
-              key={product.title}
-              content={product}
-              colored={index % 2 === 1}
-              revenue={productRev ? productRev.timesPurchased : 0}
-            />
-          );
-        })}
+        const productRev = itemMap[index + 1];
+        return (
+          <ProductTableRow
+            key={product.title}
+            content={product}
+            colored={index % 2 === 1}
+            revenue={productRev ? productRev.timesPurchased : 0}
+          />
+        );
+      })}
     </div>
   );
 };

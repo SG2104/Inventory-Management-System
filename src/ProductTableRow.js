@@ -33,14 +33,14 @@ function ProductTableRow({ content, colored, revenue }) {
       onMouseOver={setHoveredTrue}
       onMouseOut={setHoveredFalse}
     >
-      <p className={cellBackground}>{content.title}</p>
+      <div className={`${cellBackground} ${classes.leftFlex}`}>{content.title}</div>
 
-      <div className={cellBackground}><p className={classes.alignRight}>${content.price.toFixed(2)}</p></div>
-      <p className={cellBackground}>{content.category}</p>
-      <div className={cellBackground}><p className={classes.alignRight}>{content.rating.rate}</p></div>
-      <div className={cellBackground}><p className={classes.alignRight}>{content.inventory}</p></div>
-      <div className={cellBackground}><p className={classes.alignRight}>${(revenue * content.price / 2).toFixed(2)}</p></div>
-      <div className={cellBackground}>
+      <div className={`${cellBackground} ${classes.leftFlex}`}>${content.price.toFixed(2)}</div>
+      <div className={`${cellBackground} ${classes.leftFlex}`}>{content.category}</div>
+      <div className={`${cellBackground} ${classes.leftFlex}`}>{content.rating.rate}</div>
+      <div className={`${cellBackground} ${classes.leftFlex}`}>{content.inventory}</div>
+      <div className={`${cellBackground} ${classes.leftFlex}`}>${(revenue * content.price / 2).toFixed(2)}</div>
+      <div className={`${cellBackground} ${classes.centerFlex}`}>
         <button className={classes.learnMoreButton} onClick={setPopupTrue}>
           Learn More
         </button>
